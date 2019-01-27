@@ -3,7 +3,7 @@
 	"description": "Imba Sass Pro-router Boilerplate",
 	"keywords": [
 		"imba",
-		"sass"
+		"sass",
 		"pro-router"
 	],
 	"author": "iamtirado",
@@ -21,10 +21,9 @@
 		"url": "https://github.com/iamtirado/imba-sass-pro-router.git"
 	},
 	"license": "MIT",
-	"dependencies": {
-  },
+	"dependencies": {},
 	"devDependencies": {
-    "pro-router": "^4.3.2",
+		"pro-router": "^4.3.2",
 		"css-loader": "^1.0.1",
 		"express": "^4.16.2",
 		"extract-text-webpack-plugin": "^4.0.0-beta.0",
