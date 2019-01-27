@@ -1,12 +1,12 @@
 global:Router = require('pro-router/standalone')
 tag App
 	def build
-		R.init
+		R.initgi
 			root: 'main-view', 
 			views: ['main-view', 'hello', 'world']
 			render: do
 				console.log(R.view)
-	def render
+	def renderg
 		<self> 
 			<header>
 				<h4> "Home" if R.view == 'root'
