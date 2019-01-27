@@ -21,7 +21,9 @@
 		"url": "https://github.com/iamtirado/imba-sass-pro-router.git"
 	},
 	"license": "MIT",
-	"dependencies": {},
+	"dependencies": {
+		"lodash": "^4.17.11"
+	},
 	"devDependencies": {
 		"pro-router": "^4.3.2",
 		"css-loader": "^1.0.1",
