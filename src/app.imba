@@ -1,7 +1,7 @@
 global:Router = require('pro-router/standalone')
 tag App
 	def build
-		R.initgi
+		R.init
 			root: 'main-view', 
 			views: ['main-view', 'hello', 'world']
 			render: do
