@@ -7,13 +7,19 @@ tag App
 			views: ['home', 'hello', 'world']
 			render: self:render.bind(self)
 			helpers: global:L = require('lodash')
-
+	def currentRouteUpper
+		R:view[0].toUpperCase + R:view.slice(1)
 	def render
 		<self>
-			<header><h4> R:view[0].toUpperCase + R:view.slice(1)
-			<div>
-				<ref view="home"> "Home"
-				<ref view="hello"> "Hello"
-				<ref view="world"> "World"
+			# <header><h4> 
+			<header>
+				<h4> "Pro-Router With Tags — " + currentRouteUpper
+			<nav>
+				<ref view="home"> 
+					<button> "Home"
+				<ref view="hello">
+					<button> "Hello"
+				<ref view="world">
+					<button> "World"
 
 Imba.mount <App>

@@ -1,4 +1,5 @@
 global:Router = require('pro-router/standalone')
+# global:Router = require('pro-router/router')
 require './ref/ref'
 require './switch/switch'
 require './not_found/not_found'
