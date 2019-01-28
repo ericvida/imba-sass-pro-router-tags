@@ -1,28 +1,19 @@
-require('pro-router/standalone')
+require('./router/router_tag')
 
 tag App
 	def build
 		R.init
-			views: ['hello', 'world']
+			root: 'home'
+			views: ['home', 'hello', 'world']
 			render: self:render.bind(self)
-			helpers: require('lodash')
-
-	def go_home
-		R.go("/")
-	def go_hello
-		R.go("/#/hello")
-	def go_world
-		R.go("/#/world")
+			helpers: global:L = require('lodash')
 
 	def render
 		<self>
-			<header>
-				<h4> "Home" if R:view == 'root'
-				<h4> "Hello" if R:view == 'hello'
-				<h4> "World!" if R:view == 'world'
+			<header><h4> R:view[0].toUpperCase + R:view.slice(1)
 			<div>
-				<button :tap="go_home"> "home"
-				<button :tap="go_hello"> "Hello"
-				<button :tap="go_world"> "World!"
+				<ref view="home"> "Home"
+				<ref view="hello"> "Hello"
+				<ref view="world"> "World"
 
 Imba.mount <App>
